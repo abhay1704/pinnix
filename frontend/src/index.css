@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f3f4f6;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  background-clip: padding-box;
+}
+
+.hide {
+  max-height: 0 !important;
+  font-size: 0;
+  transform-origin: right;
+  overflow: hidden;
+}
+
+::-webkit-file-upload-button {
+  display: none;
+}
+
+::file-selector-button {
+  display: none;
+}
+
+.custom-scrollbar,
+html {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgb(40, 42, 50) #e5e7eb; /* Thumb and track color for Firefox */
+
+  /* Webkit Browsers */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(62, 63, 71); /* Indigo-600 */
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #e5e7eb; /* Gray-200 */
+  }
+}
+
+.no-scroller{
+  scrollbar-width: none;
+}
